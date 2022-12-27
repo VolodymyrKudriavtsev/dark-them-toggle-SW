@@ -1,0 +1,67 @@
+body {
+  background: #f0ebeb;
+}
+
+.dark body {
+  background: #1e1d1d;
+}
+
+.toggle-wrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50% -50%);
+  display: inline-block;
+}
+
+.theme-toggle {
+  -webkit-appearance: none;
+  appearance: none;
+  margin: 0;
+  width: 100px;
+  height: 40px;
+  outline: none;
+  border: 2px solid #4682b4;
+  border-radius: 40px;
+  cursor: pointer;
+  background: #87ceeb;
+  box-shadow: inset 0px 0px 5px 2px #4682b4;
+  transition-property: box-shadow background border-color;
+  transition-duration: 300ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.theme-toggle:hover {
+  box-shadow: inset 0px 0px 5px 2px #4682b4, 0px 0px 10px 3px #87ceeb;
+}
+
+.theme-toggle:checked {
+  background: #dc143c;
+  border-color: #8b0000;
+  box-shadow: inset 0px 0px 5px 2px #8b0000;
+}
+
+.theme-toggle:checked:hover {
+  box-shadow: inset 0px 0px 5px 2px #8b0000, 0px 0px 10px 3px #dc143c;
+}
+
+.theme-toggle::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 40px;
+  height: 40px;
+  background-color: transparent;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-image: url(./img/blu-sword.svg);
+  transition: 300ms;
+  transform: scale(2);
+}
+
+.theme-toggle:checked::before {
+  left: 60px;
+  background-image: url(./img/red-aword-left.svg);
+}
