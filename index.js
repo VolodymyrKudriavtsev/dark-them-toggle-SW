@@ -24,6 +24,6 @@ const onThemeToggleClick = (e) => {
   addDarkClassToHTML();
 };
 
-refs.themeToggle.addEventListener("click", onThemeToggleClick);
+refs.themeToggle.addEventListener("change", onThemeToggleClick);
 
 addDarkClassToHTML();
